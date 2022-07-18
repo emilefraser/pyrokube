@@ -1,0 +1,1 @@
+aria2c https://github.com/zegl/kube-score/releases/download/v1.14.0/kube-score_1.14.0_linux_amd64 && mv kube-score_1.14.0_linux_amd64 kube-score && chmod a+x kube-score && mv kube-score /usr/bin/local

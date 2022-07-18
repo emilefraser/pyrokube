@@ -1,0 +1,35 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/web"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    ignore:
+      - dependency-name: "eslint-plugin-prettier"
+      - dependency-name: "nanoid"
+      - dependency-name: "react-router-dom"
+      - dependency-name: "react-scripts"
+      - dependency-name: "remark-parse"
+      - dependency-name: "unified"
+      - dependency-name: "yaml"
+  - package-ecosystem: "npm"
+    directory: "/widget"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    ignore:
+      - dependency-name: "eslint-plugin-prettier"
+  - package-ecosystem: gomod
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    ignore:
+      - dependency-name: "k8s.io/apimachinery"
+      - dependency-name: "k8s.io/client-go"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"

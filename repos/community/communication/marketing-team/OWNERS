@@ -1,0 +1,16 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+reviewers:
+  - chris-short
+  - onlydole
+  - parispittman
+approvers:
+  - parispittman
+  - Pensu
+  - rajula96reddy
+  - kaslin
+emeritus_approvers:
+  - mbbroberg
+labels:
+  - sig/contributor-experience
+  - area/contributor-comms

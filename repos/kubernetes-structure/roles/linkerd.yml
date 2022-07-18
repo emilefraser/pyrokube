@@ -1,0 +1,53 @@
+# RBAC configs for linkerd
+---
+# grant linkerd/namerd permissions to enable service discovery
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: linkerd-endpoints-reader
+rules:
+  - apiGroups: [""] # "" indicates the core API group
+    resources: ["endpoints", "services", "pods"] # pod access is required for the *-legacy.yml examples in this folder
+    verbs: ["get", "watch", "list"]
+  - apiGroups: [ "extensions" ]
+    resources: [ "ingresses" ]
+    verbs: ["get", "watch", "list"]
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: linkerd-role-binding
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: default # If you run it in a different namespace, set that namespace.
+roleRef:
+  kind: ClusterRole
+  name: linkerd-endpoints-reader
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: l5d-linkerd-role-binding
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: linkerd # If you run it in a different namespace, set that namespace.
+roleRef:
+  kind: ClusterRole
+  name: linkerd-endpoints-reader
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: namerd-linkerd-role-binding
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: namerd # If you run it in a different namespace, set that namespace.
+roleRef:
+  kind: ClusterRole
+  name: linkerd-endpoints-reader
+  apiGroup: rbac.authorization.k8s.io

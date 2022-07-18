@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- If you are reading this, there is a good chance you would prefer sending an
+"Accept: application/json" header and receiving actual JSON responses. -->
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #181a1b;
+}
+html, body {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #454a4d #202324;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style><link rel="stylesheet" type="text/css" href="API%20token-sr942_files/ui.min.css"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="API%20token-sr942_files/ui.min.js"></script><meta name="darkreader" content="fb142c0d2c5f4245a28699ca972490a5"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1 {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #032029 !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #0a0a0a !important;
+}
+.tou-uknfeu {
+    background-color: #231603 !important;
+}
+.tou-6i3zyv {
+    background-color: #19576c !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style>
+<script>
+var user = "admin";
+var curlUser='${CATTLE_ACCESS_KEY}:${CATTLE_SECRET_KEY}';
+var schemas="https://delaporte.manakin-velociraptor.ts.net:7443/v3/schemas";
+var data =
+{"authProvider":"local","baseType":"token","clusterId":"local","created":"2022-07-11T22:06:26Z","createdTS":1657577186000,"creatorId":null,"current":false,"description":"rancher api for local instance","enabled":true,"expired":false,"expiresAt":"","groupPrincipals":null,"id":"token-sr942","isDerived":true,"labels":{"authn.management.cattle.io/token-userId":"user-r2fbb","cattle.io/creator":"norman"},"lastUpdateTime":"","links":{"remove":"https://delaporte.manakin-velociraptor.ts.net:7443/v3/tokens/token-sr942","self":"https://delaporte.manakin-velociraptor.ts.net:7443/v3/tokens/token-sr942","update":"https://delaporte.manakin-velociraptor.ts.net:7443/v3/tokens/token-sr942"},"name":"token-sr942","ttl":0,"type":"token","userId":"user-r2fbb","userPrincipal":"map[displayName:Default Admin loginName:admin me:true metadata:map[creationTimestamp:\u003cnil\u003e name:local://user-r2fbb] principalType:user provider:local]","uuid":"30100df3-de46-4296-b250-2e0dd96666d3"}
+</script>
+<title>API: token-sr942</title></head><body><div id="header">
+  <div id="header-error" style="display: none;"><b>Error:</b> </div>
+  <div iv="header-body">
+    <label>Operations</label>
+    <div id="operations">
+        <button type="button" class="btn btn-primary btn-sm" onclick="htmlapi.up()"><span class="glyphicon glyphicon-arrow-up"></span> Up</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="htmlapi.reload()"><span class="glyphicon glyphicon-refresh"></span> Reload</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="htmlapi.update()"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="htmlapi.remove()"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+    </div>
+    <br>
+
+    <label>Actions</label>
+    <div>
+        <span class="inactive">None</span>
+    </div>
+    <br>
+
+    <label>Filter</label>
+    <form onsubmit="htmlapi.filterApply(); return false;">
+      <div id="filters"><span class="inactive">Not available</span></div>
+    </form>
+    <br>
+
+      <label>Sort</label>
+      <p class="inactive">Not available</p>
+    <br>
+
+    <label>Pagination</label>
+      <p class="inactive">Not available</p>
+    <br>
+  </div>
+
+  <div class="footer">
+      <span class="user">admin</span>
+      <a href="#" onclick="htmlapi.logout(); return false">Log Out</a>
+  </div>
+</div>
+
+<div id="json" class="json">{<ul class="obj collapsible"><li><span class="prop"><span class="q">"</span>authProvider<span class="q">"</span></span>: <span class="string">"local"</span>,</li><li><span class="prop"><span class="q">"</span>baseType<span class="q">"</span></span>: <span class="string">"token"</span>,</li><li><span class="prop"><span class="q">"</span>clusterId<span class="q">"</span></span>: <a class="valuelink" href="https://delaporte.manakin-velociraptor.ts.net:7443/v3/clusters/local"><span class="string">"local"</span></a>,</li><li><span class="prop"><span class="q">"</span>created<span class="q">"</span></span>: <span class="string">"2022-07-11T22:06:26Z"</span>,</li><li><span class="prop"><span class="q">"</span>createdTS<span class="q">"</span></span>: <span class="num">1657577186000</span>,</li><li><span class="prop"><span class="q">"</span>creatorId<span class="q">"</span></span>: <span class="null">null</span>,</li><li><span class="prop"><span class="q">"</span>current<span class="q">"</span></span>: <span class="bool">false</span>,</li><li><span class="prop"><span class="q">"</span>description<span class="q">"</span></span>: <span class="string">"rancher api for local instance"</span>,</li><li><span class="prop"><span class="q">"</span>enabled<span class="q">"</span></span>: <span class="bool">true</span>,</li><li><span class="prop"><span class="q">"</span>expired<span class="q">"</span></span>: <span class="bool">false</span>,</li><li><span class="prop"><span class="q">"</span>expiresAt<span class="q">"</span></span>: <span class="string">""</span>,</li><li><span class="prop"><span class="q">"</span>groupPrincipals<span class="q">"</span></span>: <span class="null">null</span>,</li><li><span class="prop"><span class="q">"</span>id<span class="q">"</span></span>: <a class="valuelink" href="https://delaporte.manakin-velociraptor.ts.net:7443/v3/tokens/token-sr942"><span class="string">"token-sr942"</span></a>,</li><li><span class="prop"><span class="q">"</span>isDerived<span class="q">"</span></span>: <span class="bool">true</span>,</li><li><i class="glyphicon glyphicon-minus"></i><span class="prop"><span class="q">"</span>labels<span class="q">"</span></span>: {<ul class="obj collapsible"><li><span class="prop"><span class="q">"</span>authn.management.cattle.io/token-userId<span class="q">"</span></span>: <span class="string">"user-r2fbb"</span>,</li><li><span class="prop"><span class="q">"</span>cattle.io/creator<span class="q">"</span></span>: <span class="string">"norman"</span></li></ul>},</li><li><span class="prop"><span class="q">"</span>lastUpdateTime<span class="q">"</span></span>: <span class="string">""</span>,</li><li><i class="glyphicon glyphicon-minus"></i><span class="prop"><span class="q">"</span>links<span class="q">"</span></span>: {<ul class="obj collapsible"><li><span class="prop"><span class="q">"</span>remove<span class="q">"</span></span>: <a class="valuelink" href="https://delaporte.manakin-velociraptor.ts.net:7443/v3/tokens/token-sr942"><span class="string">"…/v3/tokens/token-sr942"</span></a>,</li><li><span class="prop"><span class="q">"</span>self<span class="q">"</span></span>: <a class="valuelink" href="https://delaporte.manakin-velociraptor.ts.net:7443/v3/tokens/token-sr942"><span class="string">"…/v3/tokens/token-sr942"</span></a>,</li><li><span class="prop"><span class="q">"</span>update<span class="q">"</span></span>: <a class="valuelink" href="https://delaporte.manakin-velociraptor.ts.net:7443/v3/tokens/token-sr942"><span class="string">"…/v3/tokens/token-sr942"</span></a></li></ul>},</li><li><span class="prop"><span class="q">"</span>name<span class="q">"</span></span>: <span class="string">"token-sr942"</span>,</li><li><span class="prop"><span class="q">"</span>ttl<span class="q">"</span></span>: <span class="num">0</span>,</li><li><span class="prop"><span class="q">"</span>type<span class="q">"</span></span>: <a class="valuelink" href="https://delaporte.manakin-velociraptor.ts.net:7443/v3/schemas/token"><span class="string">"token"</span></a>,</li><li><span class="prop"><span class="q">"</span>userId<span class="q">"</span></span>: <a class="valuelink" href="https://delaporte.manakin-velociraptor.ts.net:7443/v3/users/user-r2fbb"><span class="string">"user-r2fbb"</span></a>,</li><li><span class="prop"><span class="q">"</span>userPrincipal<span class="q">"</span></span>: <a class="valuelink" href="https://delaporte.manakin-velociraptor.ts.net:7443/v3/principals/map%5BdisplayName%3ADefault%20Admin%20loginName%3Aadmin%20me%3Atrue%20metadata%3Amap%5BcreationTimestamp%3A%3Cnil%3E%20name%3Alocal%3A//user-r2fbb%5D%20principalType%3Auser%20provider%3Alocal%5D"><span class="string">"map[displayName:Default Admin loginName:admin me:true metadata:map[creationTimestamp:&lt;nil&gt; name:local://user-r2fbb] principalType:user provider:local]"</span></a>,</li><li><span class="prop"><span class="q">"</span>uuid<span class="q">"</span></span>: <span class="string">"30100df3-de46-4296-b250-2e0dd96666d3"</span></li></ul>}</div>
+</body></html>

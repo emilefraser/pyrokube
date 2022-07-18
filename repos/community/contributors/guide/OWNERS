@@ -1,0 +1,11 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - mrbobbytables
+  - parispittman
+emeritus_approvers:
+  - castrojo
+  - guineveresaenger
+labels:
+  - sig/contributor-experience
+  - area/contributor-guide

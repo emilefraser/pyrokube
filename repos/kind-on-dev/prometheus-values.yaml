@@ -1,0 +1,63 @@
+prometheus:
+  thanosIngress:
+    ingressClassName: ${INGRESS_CLASS}
+    annotations:
+      traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+    hosts: ["${OAM_DOMAIN}"]
+    paths: [/thanos]
+  ingress:
+    enabled: true
+    ingressClassName: ${INGRESS_CLASS}
+    hosts: ["${OAM_DOMAIN}"]
+    paths: [/prometheus]
+  prometheusSpec:
+    ruleSelectorNilUsesHelmValues: false
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    probeSelectorNilUsesHelmValues: false
+    routePrefix: /prometheus
+
+alertmanager:
+  ingress:
+    enabled: true
+    ingressClassName: ${INGRESS_CLASS}
+    hosts: ["${OAM_DOMAIN}"]
+    paths: [/alertmanager]
+  alertmanagerSpec:
+    routePrefix: /alertmanager
+
+grafana:
+  adminPassword: prom-operator
+  ingress:
+    enabled: true
+    ingressClassName: ${INGRESS_CLASS}
+    hosts: ["${OAM_DOMAIN}"]
+    path: /grafana
+  sidecar:
+    dashboards:
+      provider:
+        allowUiUpdates: true
+  env:
+    GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: pgillich-tree-panel
+  plugins:
+   - marcusolsson-json-datasource
+   - pgillich-tree-panel
+  additionalDataSources:
+    - name: K8s API
+      type: marcusolsson-json-datasource
+      url: http://kubectl-proxy
+    - name: K8s log API
+      type: marcusolsson-json-datasource
+      url: http://kubectl-proxy:8002
+    - name: K8s ext API
+      type: marcusolsson-json-datasource
+      url: http://kubectl-proxy:8003
+  extraEmptyDirMounts:
+    - name: grafana-plugins
+      mountPath: /var/lib/grafana/plugins
+  grafana.ini:
+    server:
+      domain: "${OAM_DOMAIN}"
+      root_url: "%(protocol)s://%(domain)s/grafana"
+      serve_from_sub_path: true
+

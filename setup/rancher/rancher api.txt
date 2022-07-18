@@ -1,0 +1,10 @@
+https://delaporte.manakin-velociraptor.ts.net:7443/v3
+
+access key
+token-sr942
+
+secret
+9x9tcdbdqww9s5kg2l4nblt8jdjtpqx49qs79pvz5k5h6q5kzt7c2t
+
+bearer
+token-sr942:9x9tcdbdqww9s5kg2l4nblt8jdjtpqx49qs79pvz5k5h6q5kzt7c2t

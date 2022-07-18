@@ -1,0 +1,15 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - cblecker
+  - mrbobbytables
+  - nikhita
+
+reviewers:
+  - ameukam
+  - idvoretskyi
+  - palnabarun
+
+labels:
+  - sig/contributor-experience
+  - area/github-management
